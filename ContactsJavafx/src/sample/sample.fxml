@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ContactsController">
+    <left>
+        <ListView fx:id="ContactsListView" maxHeight="1.7976931348623157E308" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets right="8.0" />
+            </BorderPane.margin>
+        </ListView>
+    </left>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+    <center>
+        <GridPane hgap="10.0" style="-fx-background-color: #073a8c;" vgap="8.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="PhotoImageView" fitHeight="107.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="30.0" />
+                    </GridPane.margin></ImageView>
+                <TextField fx:id="NameTextField" editable="false" />
+                <TextField fx:id="SurnameTextField" editable="false" GridPane.rowIndex="1" />
+                <TextField fx:id="EmailTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="PhoneNumberTextField" editable="false" GridPane.rowIndex="2" />
+                <TextField fx:id="AgeTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Name" textFill="WHITE">
+                    <padding>
+                        <Insets bottom="60.0" />
+                    </padding>
+                </Label>
+                <Label text="Surname" textFill="WHITE" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets bottom="60.0" />
+                    </padding>
+                </Label>
+                <Label text="Email" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <padding>
+                        <Insets bottom="60.0" />
+                    </padding>
+                </Label>
+                <Label text="PhoneNumber" textFill="WHITE" GridPane.rowIndex="2">
+                    <padding>
+                        <Insets bottom="60.0" />
+                    </padding>
+                </Label>
+                <Label text="Age" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets bottom="60.0" />
+                    </padding>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+            </padding>
+        </GridPane>
+    </center>
+</BorderPane>
